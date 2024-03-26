@@ -1,5 +1,5 @@
 compiler = g++
 cflags = 
 : foreach *.cpp |> $(compiler) -Wall $(cflags) -c %f -o %o |> %B.o
-linkFlags=-lSDL2
+linkFlags=
 : *.o |> $(compiler) %f -o %o $(linkFlags) |> main
